@@ -27,7 +27,7 @@ cd twitter-to-bsky
 # Get an archive from https://twitter.com/settings/download_your_data
 # Unzip the archive to a folder named `twitter-archive` in the same directory as main.py
 
-# Convert animation media into jpeg 
+# Convert animation media into jpeg
 ./convert_media.sh
 
 export BSKY_USERNAME="yourname.bsky.social"
@@ -89,6 +89,8 @@ It will try to resume the process exactly where it failed.
 
 - Whenever the target tags are used in middle of a thread, tweets might be posted multiple times.
 - ALT text for media are not supported.
+- Animation media (e.g. gif) are not supported by bluesky at this time, and thus are converted in signe jpeg.
+- Media of size greater than 975kb will not be posted due to bluesky size limitation.
 
 ### Thanks to
 
